@@ -39,10 +39,10 @@ const TrainingResources = () => {
   const handleSave = () => {
     console.log('Saving training content:', trainingContent);
     console.log('Active resources:', resources.filter(r => r.active).map(r => r.name));
-    toast({
-      title: "Treinamento salvo",
-      description: "Seu conteúdo e recursos foram salvos com sucesso.",
-    });
+    // toast({
+    //   title: "Treinamento salvo",
+    //   description: "Seu conteúdo e recursos foram salvos com sucesso.",
+    // });
   };
 
   const handleReconnect = (id) => {
@@ -60,7 +60,7 @@ const TrainingResources = () => {
 
   return (
     <div className="container mx-auto p-4 max-w-7xl">
-      <h1 className="text-3xl font-bold mb-6 text-center">Página de Treinamento</h1>
+      {/* <h1 className="text-3xl font-bold mb-6 text-center">Página de Treinamento</h1> */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card className="lg:col-span-2">
           <CardHeader>
