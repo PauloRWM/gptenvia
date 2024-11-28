@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\training;
+use App\Http\Controllers\TrainingController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,5 +17,7 @@ use App\Http\Controllers\training;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post("/api/training", [training::class, 'store']);
-Route::get("/api/training", [training::class, 'index']);
+Route::middleware('auth')->group(function () {
+    Route::post("/training", [TrainingController::class, 'store']);
+    Route::get("/training", [TrainingController::class, 'index']);
+});
