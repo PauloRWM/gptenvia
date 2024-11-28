@@ -2,14 +2,14 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: ['class'], // Suporte a dark mode
+    darkMode: ['class'], 
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.jsx',
-        './resources/js/**/*.tsx', // Inclui suporte para arquivos TypeScript JSX
-        './node_modules/@shadcn/ui/components/**/*.{js,ts,jsx,tsx}', // Componentes ShadCN
+        './resources/js/**/*.tsx',
+        './node_modules/@shadcn/ui/components/**/*.{js,ts,jsx,tsx}', 
     ],
     theme: {
         extend: {
@@ -66,16 +66,16 @@ module.exports = {
         },
     },
     safelist: [
-        'sm:max-w-[425px]', // Classe usada no DialogContent
+        'sm:max-w-[425px]', 
         'bg-background',
         'text-foreground',
         'rounded-lg',
         'shadow-lg',
-        'z-50', // Z-index para modais
-        'overflow-hidden', // Garantir suporte a componentes como Dialog
+        'z-50', 
+        'overflow-hidden', 
     ],
     plugins: [
-        require('@tailwindcss/forms'), // Estilos para formulários
-        require('tailwindcss-animate'), // Animações para modais e transições
+        require('@tailwindcss/forms'), 
+        require('tailwindcss-animate'), 
     ],
 };
